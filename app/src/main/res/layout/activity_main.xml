@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tvTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手动改变进度"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.lhcredit.commonres.widget.ProgressBarView
+        android:id="@+id/progress1"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginTop="10dp"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle1" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:max="100"
+        app:layout_constraintBottom_toBottomOf="@+id/tvButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvButton"
+        app:layout_constraintTop_toBottomOf="@+id/progress1"
+        app:layout_constraintTop_toTopOf="@+id/tvButton" />
+
+    <TextView
+        android:id="@+id/tvButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:onClick="changeCorner"
+        android:padding="5dp"
+        android:text="左上圆角"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress1" />
+
+    <TextView
+        android:id="@+id/tvTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="自动改变进度"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <com.lhcredit.commonres.widget.ProgressBarView
+        android:id="@+id/progress2"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginTop="10dp"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle2" />
+
+    <TextView
+        android:id="@+id/tvButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:onClick="left2Right"
+        android:padding="5dp"
+        android:text="从左向右"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress2" />
+
+    <TextView
+        android:id="@+id/tvButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:onClick="right2left"
+        android:padding="5dp"
+        android:text="从右向左"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/tvButton1"
+        app:layout_constraintTop_toBottomOf="@+id/progress2" />
+
+    <TextView
+        android:id="@+id/tvButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:onClick="changeColor"
+        android:padding="5dp"
+        android:text="随机换色"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/tvButton2"
+        app:layout_constraintTop_toBottomOf="@+id/progress2" />
+
+    <TextView
+        android:id="@+id/tvButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:onClick="toList"
+        android:padding="5dp"
+        android:text="答题PK列表"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/tvButton3"
+        app:layout_constraintTop_toBottomOf="@+id/progress2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

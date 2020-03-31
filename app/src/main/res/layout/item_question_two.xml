@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp">
+
+    <include layout="@layout/item_question_title" />
+
+    <TextView
+        android:id="@+id/tvYes"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_left"
+        android:gravity="center"
+        android:text="是"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/ivVs"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestion" />
+
+    <ImageView
+        android:id="@+id/ivVs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/iv_ps"
+        app:layout_constraintBottom_toBottomOf="@+id/tvYes"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvYes" />
+
+    <TextView
+        android:id="@+id/tvNo"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_right"
+        android:gravity="center"
+        android:text="不是"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@+id/tvYes"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@+id/ivVs"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvYes" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="15dp"
+        android:background="#f2f2f2"
+        app:layout_constraintTop_toBottomOf="@+id/tvYes" />
+</androidx.constraintlayout.widget.ConstraintLayout>
